@@ -17,7 +17,8 @@ export default function Image() {
           flexDirection: "column",
           justifyContent: "space-between",
           padding: 72,
-          background: "radial-gradient(900px 500px at 85% 15%, rgba(35,71,197,0.55), transparent 60%), #060b1a",
+          backgroundColor: "#060b1a",
+          backgroundImage: "radial-gradient(circle at 85% 15%, rgba(35,71,197,0.55) 0%, rgba(6,11,26,0) 55%)",
           color: "#eaf2ff",
         }}
       >
