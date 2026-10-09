@@ -16,7 +16,7 @@ export function CookieNotice() {
 
   useEffect(() => {
     if (getConsent() === null) {
-      const t = setTimeout(() => setVisible(true), 3200); // after the loader
+      const t = setTimeout(() => setVisible(true), 1200);
       return () => clearTimeout(t);
     }
   }, []);

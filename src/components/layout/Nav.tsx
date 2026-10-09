@@ -36,6 +36,7 @@ export function Nav() {
   const isActive = (href: string) => (href === "/" ? pathname === "/" : pathname.startsWith(href));
 
   return (
+    <>
     <header
       className={`fixed inset-x-0 top-0 z-[80] transition-[background,backdrop-filter,border-color] duration-500 ${
         scrolled || open ? "border-b border-line bg-bg/70 backdrop-blur-xl" : "border-b border-transparent"
@@ -95,6 +96,8 @@ export function Nav() {
         </button>
       </div>
 
+    </header>
+
       <AnimatePresence>
         {open && (
           <motion.div
@@ -103,7 +106,7 @@ export function Nav() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.25 }}
-            className="fixed inset-x-0 bottom-0 top-[4.5rem] bg-bg/95 backdrop-blur-xl md:hidden"
+            className="fixed inset-x-0 bottom-0 top-[4.5rem] z-[79] bg-bg/95 backdrop-blur-xl md:hidden"
           >
             <nav aria-label="Mobile" className="container-site flex h-full flex-col justify-center gap-2 pb-24">
               {nav.map((item, i) => (
@@ -122,6 +125,6 @@ export function Nav() {
           </motion.div>
         )}
       </AnimatePresence>
-    </header>
+    </>
   );
 }
