@@ -21,7 +21,7 @@
     "gsap": "^3.13.0",
     "lenis": "^1.3.0",
     "next": "^15.5.0",
-    "next-mdx-remote": "^5.0.0",
+    "next-mdx-remote": "^6.0.0",
     "nodemailer": "^6.9.16",
     "postprocessing": "^6.37.0",
     "react": "^19.1.0",
