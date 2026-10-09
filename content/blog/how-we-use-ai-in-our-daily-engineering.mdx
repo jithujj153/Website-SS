@@ -1,0 +1,65 @@
+---
+title: "How we use AI in our day-to-day engineering work"
+excerpt: "A practical look at where AI assistants earn their place on our team, where we keep them on a short leash, and the rules we follow."
+date: "2026-09-29"
+category: "AI"
+featured: false
+---
+
+AI tools are now part of how we write software at System-Smiths. We would rather describe that plainly than either oversell it or hide it. This is what it looks like on an ordinary working day.
+
+## Where it helps most
+
+The biggest gains come from work that is tedious but well understood.
+
+**Boilerplate and glue.** Forms, API handlers, table views and data migrations follow patterns we know well. An assistant can draft the first version in moments, and we spend our attention on the parts that are specific to the client.
+
+**Reading unfamiliar code.** When we inherit a legacy system, asking an assistant to summarise a confusing module or trace where a value comes from saves real time. We still confirm by reading the code ourselves, but the starting map is useful.
+
+**First drafts of tests.** Describing a behaviour and getting a draft test back is a fast way to cover the obvious cases. We then add the odd ones that only experience suggests.
+
+**Explaining and documenting.** Turning a finished feature into a clear README, a changelog entry or a handover note is faster with a draft to edit.
+
+## Where we keep it on a short leash
+
+Some work gets extra caution, whatever tool produced the first draft:
+
+- Anything involving money, tax, stock counts or payroll.
+- Permissions and anything that decides who can see or change data.
+- Security-sensitive code such as authentication and file uploads.
+- Database changes that cannot easily be undone.
+
+For these, an engineer reads every line, and we test against realistic cases before anything ships. An assistant that sounds certain is not evidence of correctness.
+
+## Our working rules
+
+We keep a short list, and we mean it.
+
+1. **A person owns every change.** If it is in the repository, an engineer understands it and can explain it. "The AI wrote it" is never an answer in a review.
+2. **We do not paste sensitive data into tools.** Client data, credentials and secrets stay out of prompts. We use synthetic examples instead.
+3. **We check licences and dependencies.** Suggested packages are verified to exist, to be maintained and to fit the project, because assistants sometimes invent names that sound plausible.
+4. **Tests come first or alongside.** Generated code earns trust the same way hand-written code does, by passing meaningful tests.
+5. **Small steps.** We ask for small, reviewable changes rather than sweeping rewrites that nobody can properly read.
+
+## What it has not changed
+
+AI has not changed the hard part of the job, which is understanding what a business actually needs. No assistant can sit with a fuel station manager and notice that the shift handover is really a negotiation. Talking to people, deciding what to leave out and choosing a design that will still make sense in two years remain human work.
+
+It has also not removed the need for judgement about quality. If anything, it raises the bar for review. When writing code gets cheaper, reading it carefully becomes the scarce skill.
+
+## Common failure modes we watch for
+
+We have learned to recognise a few patterns:
+
+- **Plausible but wrong.** Code that looks right, compiles, and quietly mishandles an edge case.
+- **Over-engineering.** Assistants love adding abstractions nobody asked for. We often delete more than we keep.
+- **Drift from the codebase.** Suggestions that ignore the conventions of the project make code harder to maintain.
+- **False confidence in the reviewer.** Fluent output can lower our guard. Reviews of generated code deserve more suspicion, not less.
+
+## What this means for clients
+
+Mostly, it means we can reach a working version sooner, and spend more of the project on the decisions that matter. It also means you can ask us how we use these tools, and we will answer honestly. If you have rules about where your data may go, we follow them, and we can work without assistants on any part of a project where you prefer that.
+
+## The honest summary
+
+AI makes us faster at the routine parts of engineering and better at exploring options. It does not replace review, testing or taste. We treat it like a very quick junior colleague: helpful, tireless, and in need of supervision.

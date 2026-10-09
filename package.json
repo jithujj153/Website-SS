@@ -1,0 +1,47 @@
+{
+  "name": "system-smiths-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "System-Smiths: a scroll-driven 3D story site (Next.js App Router + React Three Fiber)",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@fontsource-variable/inter": "^5.2.0",
+    "@fontsource-variable/jetbrains-mono": "^5.2.0",
+    "@fontsource-variable/sora": "^5.2.0",
+    "@react-three/drei": "^10.7.0",
+    "@react-three/fiber": "^9.3.0",
+    "@react-three/postprocessing": "^3.0.4",
+    "framer-motion": "^12.23.0",
+    "gray-matter": "^4.0.3",
+    "gsap": "^3.13.0",
+    "lenis": "^1.3.0",
+    "next": "^15.5.0",
+    "next-mdx-remote": "^5.0.0",
+    "nodemailer": "^6.9.16",
+    "postprocessing": "^6.37.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "rehype-slug": "^6.0.0",
+    "remark-gfm": "^4.0.0",
+    "three": "^0.180.0",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.0",
+    "@types/node": "^22.0.0",
+    "@types/nodemailer": "^6.4.17",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "@types/three": "^0.180.0",
+    "tailwindcss": "^4.1.0",
+    "typescript": "^5.9.0"
+  },
+  "engines": {
+    "node": ">=20.9"
+  }
+}

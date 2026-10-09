@@ -1,0 +1,67 @@
+---
+title: "Reducing downtime for businesses with smarter systems"
+excerpt: "Downtime is rarely one big outage. It is the small stalls that add up. Here is how we find them and how software can remove them."
+date: "2026-10-02"
+category: "Operations"
+featured: false
+---
+
+When people hear "downtime" they picture a server going dark. For most operations-heavy businesses the costlier version is quieter: the cashier waiting for a price, the stores clerk hunting for a figure, the supervisor reconciling two spreadsheets before the shift can close.
+
+None of this shows up on a monitoring dashboard, yet all of it stops work. This post covers how we look for those stalls and what software can do about them.
+
+## Find where work actually waits
+
+Before proposing any system we watch how a day really runs, not how the process document says it runs. We look for the same few patterns:
+
+- Someone waits for information that exists, but lives somewhere else.
+- Someone re-enters data that was already entered.
+- Work stops until an approver, who is unreachable, signs off.
+- A problem is found late, after it has already spread.
+
+Each is a kind of downtime, and fixing them rarely needs anything exotic.
+
+## One source of truth beats three copies
+
+The most common cause of stalls we see is duplicated data. Stock is in a ledger, a spreadsheet and someone's head, and the three disagree. Every disagreement costs a conversation to settle.
+
+A single system that everyone reads from and writes to removes that whole class of delay. The goal is not impressive technology. It is that when someone asks "how much do we have?", there is one answer and it is current.
+
+## Automate the handoffs
+
+Many stalls live at the boundary between two people or departments. An order is taken, then someone must tell the kitchen. A leave request is filed, then someone must remember to approve it.
+
+Workflow automation makes the next step happen by itself, or makes the waiting visible. A request left unapproved can nudge the approver. A finished production batch can update stock without anyone relaying the number.
+
+We automate the handoff, not the judgement. A person still decides; the system makes sure they are asked at the right time with the right information in front of them.
+
+## Make problems visible early
+
+A late-discovered problem is expensive because it has had time to spread. A shift variance noticed at closing is annoying. The same variance found at month-end is a project.
+
+Simple checks catch these early: a daily reconciliation that flags a mismatch, an alert when stock falls below a level you chose, a status board showing what is blocked right now. They do not prevent every mistake. They shorten the time between a mistake and its discovery, which is where much of the cost sits.
+
+## Plan for the real outage too
+
+Software can fail, so a system you depend on should be designed with that in mind. For the systems we build:
+
+- Releases are small and reversible, so a bad one can be rolled back quickly.
+- Backups exist and are restored in a test now and then, because an untested backup is a hope, not a plan.
+- Critical screens degrade gracefully where possible, for example recording a bill and syncing it when the connection returns.
+- There is a plain, boring runbook for what to do when something breaks.
+
+We do not promise that nothing will go wrong. We promise to think about what happens when it does.
+
+## Migrations are downtime risks too
+
+Moving from an old system to a new one is where many businesses get hurt. A careless cut-over causes the very stalls the new system was meant to remove. That is why platform migration is a service of its own for us, not an afterthought.
+
+Where practical we run old and new side by side, compare results, and switch at a quiet moment with a way back. It is slower than flipping a switch on a Friday evening, and far calmer on Monday morning.
+
+## Measure what you care about
+
+We avoid inventing numbers and ask clients not to chase vanity ones. Useful measures are plain: how long closing a shift takes, how often stock is wrong, how many times a day someone asks a question a screen should answer. Pick two or three, note them before the project and check again afterwards.
+
+## Where to begin
+
+If you suspect small stalls are costing you time, write down the five questions people ask most often during a day. The answers usually point straight at the first system worth building.
